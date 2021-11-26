@@ -37,6 +37,7 @@ unsigned int _pow(int x, int y)
 	if (y < 0)
 	{
 		y = y * -1;
+		res = 1 / x;
 		for (i = 1; i < y; i++)
 			res = res * (1 / x);
 	}
@@ -77,7 +78,7 @@ t_cell *heron(double p, double x0)
 	}
 	head = add_nodeint_end(NULL, x0);
 	x = 0.5 * (x0 + (p / x0));
-	while (_abs(x - x0) > _pow(10, -7))
+	while (_abs(x - x0) > 0.0000001)
 	{
 		head = add_nodeint_end(head, x);
 		x0 = x;
