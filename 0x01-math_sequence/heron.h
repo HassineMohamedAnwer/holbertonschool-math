@@ -2,7 +2,11 @@
 #define HERON_H
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
+/**
+ * struct list_s - list
+ * @elt: double
+ * @next: pointer to next in list
+*/
 typedef struct list_s
 {
 	double elt;
